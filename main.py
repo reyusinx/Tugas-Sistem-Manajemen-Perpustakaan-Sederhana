@@ -46,8 +46,8 @@ for i in range(jbb):
     
     # untuk menyimpan data buku ke array
     bl.append({
-        'nama': jb,
-        'hari': jp
+        'nama': jb, #'nama' untuk menyimpan data nama buku
+        'hari': jp #'hari' untuk menyimpan data hari  peminjaman buku
     })
     # menghitung biaya buku
     bb = jp*BiayaPerHari
@@ -56,13 +56,23 @@ for i in range(jbb):
 
 # OUTPUT
 print("\n" + "="*50)
+# menggunakan fungsi capitalize() untuk mengkapitalkan huruf pertama
 print(f"Nama peminjam: {np.capitalize()}")
+# Perulangan untuk print data nama buku, jumlah hari, dan biaya buku 
 for i, buku in enumerate (bl, 1):
     print(f"Buku {i}:")
     print(f"nama buku: {buku['nama'].capitalize()}")
     print(f"Jumlah Hari peminjaman: {buku['hari']} hari")
+    # biaya = jumlah hari x biaya per hari
     print(f"Biaya: Rp.{buku['hari']*BiayaPerHari}" + "\n")
 print(f"TOTAL BIAYA: Rp.{tb}")
 
 print("="*50)
 print("Terima kasih sudah memakai layanan kami!".center(50))
+
+"""
+Made by Kelompok 10 TI-B
+- Immanuel Rey Usmin Sinaga
+- Muhammad Ilham Jamaluddin
+- Maulana Ibrahim
+"""
